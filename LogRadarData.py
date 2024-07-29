@@ -1,8 +1,8 @@
 import serial
 
 # Configure the serial port
-serial_port = '/dev/ttyUSB0'  # Update this to your serial port
-baud_rate = 921600  # Update this to your sensor's baud rate
+serial_port = '/dev/ttyUSB0'  # Serial port
+baud_rate = 921600  # Sensor's baud rate
 
 # Open the serial port
 ser = serial.Serial(serial_port, baud_rate, timeout=1)
@@ -10,8 +10,8 @@ ser = serial.Serial(serial_port, baud_rate, timeout=1)
 def parse_sensor_data(line):
     """
     Parse a line of sensor data.
-    :param line: str, raw line from the sensor
-    :return: dict, parsed sensor data
+    :param line: str --> raw line from the sensor
+    :return: dict --> parsed sensor data
     """
     try:
         # Split the line by commas
